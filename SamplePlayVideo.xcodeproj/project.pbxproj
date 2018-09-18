@@ -313,7 +313,7 @@
 				TargetAttributes = {
 					81EF8E1C1D76F811005DD243 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 2A5X62TE5Q;
+						DevelopmentTeam = PR3359XC54;
 					};
 					81EF8E351D76F811005DD243 = {
 						CreatedOnToolsVersion = 7.3;
@@ -656,6 +656,7 @@
 			baseConfigurationReference = A90EC30806840EDBE4FF67AF /* Pods-SamplePlayVideo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PR3359XC54;
 				INFOPLIST_FILE = SamplePlayVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quang.1234;
@@ -668,6 +669,7 @@
 			baseConfigurationReference = 05E4EB199EFF25BB9D3E3AD7 /* Pods-SamplePlayVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PR3359XC54;
 				INFOPLIST_FILE = SamplePlayVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quang.1234;
