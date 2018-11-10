@@ -20,5 +20,49 @@ platform :ios do
   puts("this is my first 🚀 lane")
   lane :custom_lane do
     # add actions here: https://docs.fastlane.tools/actions
+
+    text =  "## NowPartner AppStore Release 
+Hi all,
+    
+AppStore Release . Please waiting 15-30 minutes for AppStore processing and available on TestFlight
+    
+### Changelog:
+----------
+----------
+
+Best Regards,
+iOS Team"
+    attachment = {
+      "text": text,
+    }
+    data = {
+      # "text" => "test", 
+      "attachments": [attachment],
+      "username": "Ocha iOS Bot",
+    }
+    send_mattermost_message(data)
+
   end
+end
+
+def send_mattermost_message(payload)
+  liveURL = "https://mattermost.garenanow.com/hooks/sj8epgcy43nduq9x5xznmq81ho"
+  url = liveURL
+  
+  puts "Sending mattermost message ......"
+  puts payload.to_json
+
+  uri = URI(url)
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+  req = Net::HTTP::Post.new(uri.path, 'Content-Type' => 'application/json')
+  req.body = payload.to_json
+  res = http.request(req)
+  puts "response #{res}"
+  
+  # system `curl -i -X POST -H 'Content-Type: application/json' -d '#{payload}' #{url}`
+
+rescue => e
+  puts "failed #{e}"
+
 end
